@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"grpc-go-course/calculator/calculatorpb"
 	"io"
 	"log"
 	"time"
@@ -10,8 +11,6 @@ import (
 	"google.golang.org/grpc/codes"
 
 	"google.golang.org/grpc/status"
-
-	"github.com/simplesteph/grpc-go-course/calculator/calculatorpb"
 
 	"google.golang.org/grpc"
 )

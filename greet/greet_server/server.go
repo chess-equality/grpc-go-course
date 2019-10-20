@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"grpc-go-course/greet/greetpb"
 	"io"
 	"log"
 	"net"
@@ -12,8 +13,6 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/status"
-
-	"github.com/simplesteph/grpc-go-course/greet/greetpb"
 
 	"google.golang.org/grpc"
 )
@@ -116,7 +115,7 @@ func main() {
 		log.Fatalf("Failed to listen: %v", err)
 	}
 
-	opts := []grpc.ServerOption{}
+	var opts []grpc.ServerOption
 	tls := false
 	if tls {
 		certFile := "ssl/server.crt"

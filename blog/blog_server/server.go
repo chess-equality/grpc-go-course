@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"grpc-go-course/blog/blogpb"
 	"log"
 	"net"
 	"os"
@@ -18,7 +19,6 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"github.com/simplesteph/grpc-go-course/blog/blogpb"
 	"google.golang.org/grpc"
 )
 
